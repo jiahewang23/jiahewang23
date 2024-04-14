@@ -1,3 +1,57 @@
+# SUMMARY
+## the Generated Variable
+1. From: **a_fine**     To: **a_finenumeric a_finedummy**
+
+2. From: **a_reprimand** To: **a_reprimanddummy**       
+(numeric variable has been dropped)
+
+3. From: **a_suspervision** To: **a_reprimandnumeric a_supervisiondummy** 
+
+4. From: **a_assessment**  To:**a_assessmentdummy**
+(numeric variable has been dropped)
+
+5. From: **a_community** To: **a_communitynumeric a_communitydummy**
+
+6. From: **a_probation** To: **a_probationnumeric a_probationdummy**
+
+7. From: **a_education** To: **a_educationnumeric a_educationdummy**
+
+8. From: **a_voluntary_relinquish** To:**a_voluntary_relinquishdummy**
+(numeric variable has been dropped)
+
+9. From: **a_discipline_relinquish** To:**a_discipline_relinquishdummy**
+(numeric variable has been dropped)
+
+10. From: **a_letter** To: **a_letterdummy**
+(numeric variable has been dropped)
+
+11. From: **a_pratice_restriction** To:**a_practice_restrictiondummy**
+(numeric variable has been dropped)
+
+12. From: **a_suspension** To:**a_suspensionnumeric a_suspensiondummy**
+
+13. From: **a_paycosts** To:**a_cost a_anycost**
+
+14. From:**a_revoked** To:**a_revokeddummy**
+(numeric variable has been dropped)
+
+15. From:**a_priviledge** To:**a_priviledgedummy**
+(numeric variable has been dropped)
+
+## the dropped variable
+-  a_reprimandnumeric
+-  a_assessmentnumeric
+-  a_voluntary_relinquishnumeric
+-  a_discipline_relinquishnumeric
+- a_letternumeric
+- a_practice_restrictionnumeric
+- a_revokednumeric
+- a_priviledgenumeric
+  
+Because their numeric varibale make no sense.
+
+**Below are the code steps to generate the variable**
+
 # 1. From data a_paycost
 ## 1.1 Generate the variable a_cost which is the numeric data.
 ### 1.1.1 Generate the variable which the range and pick the Maximum one.
@@ -552,4 +606,24 @@ label variable a_cost "the numeric variable of paycosts"
 . label variable a_priviledgenumeric "numeric variable for a_priviledge"
 
 . label variable a_priviledgedummy "dummy variable for a_priviledge"
+````
+
+# drop the numeric variables which are not make sense.
+````
+
+. drop a_reprimandnumeric
+
+. drop a_assessmentnumeric
+
+. drop a_voluntary_relinquishnumeric
+
+. drop a_discipline_relinquishnumeric
+
+. drop a_letternumeric
+
+. drop a_practice_restrictionnumeric
+
+. drop a_revokednumeric
+
+. drop a_priviledgenumeric
 ````
